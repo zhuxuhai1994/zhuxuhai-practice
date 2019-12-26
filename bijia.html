@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>productlist</title>
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/bijia.css" />
+  </head>
+  <body>
+    <!-- 头部 -->
+    <header class="header" class="header">
+      <a href="#" class="leftlogo"
+        ><img src="./img/header_logo.png" alt="leftlogo"
+      /></a>
+      <a href="#" class="rightlogo"
+        ><img src="./img/header_app.png" alt="leftlogo"
+      /></a>
+    </header>
+    <section>
+      <form action="#" class="form-search">
+        <input type="text" placeholder="请输入你想比价的商品" />
+        <button>搜索</button>
+      </form>
+    </section>
+    <section class="fidler">
+      <a href="index.html">首页</a><span>></span
+      ><a href="category.html">全部分类</a><span>>></span
+      ><a class="yyqq" href="javascript:history.go(-1)">1</a><span>>>></span
+      ><a class="twoshaoxuan"></a><button>筛选</button>
+    </section>
+    <article class="article">
+      <div class="category"></div>
+    </article>
+
+    <footer class="footer">
+      <ul>
+        <li><a href="javascript:;">登录</a></li>
+        <li><a href="javascript:;">注册</a></li>
+        <li>
+          <a href="#"
+            ><img src="http://www.zuyushop.com/wap/images/top.jpg" />返回顶部</a
+          >
+        </li>
+      </ul>
+      <div class="footer-bottom">
+        <p>
+          <span>手机app下载&nbsp;</span
+          ><a href="#" class="mmm-tract">慢慢买手机版</a>&nbsp;<ins class=""
+            >--掌上比价平台</ins
+          >
+        </p>
+        <span class="">m.manmanbuy.com</span>
+      </div>
+    </footer>
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./lib/template-web.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/bijia.js"></script>
+    <script type="text/html" id="tpl">
+
+      <div class="category-top">{{result.productName}}</div>
+        <div class="category-img"><img src="{{result.productImg.src}}" alt="{{result.productImg.alt}}" /></div>
+        <div class="category-shoucang"><img src="" alt=""></div>
+        <div class="category-pingjia">
+          <div>比价购买</div>
+          <div>产品参数</div>
+          <div>评价(1234)</div>
+        </div>
+        <div class="category-jiage">
+          <div class="jiage-left">
+            <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="" /><span>京东商城</span>
+          </div>
+          <div class="jiage-right">
+            <span>{{result.bjShop}}</span><button>去购买</button>
+          </div>
+        </div>
+        <div class="category-tip">
+          <p>
+            *
+            实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+          </p>
+        </div>
+        <div class="pingjisass">网友评价</div>
+        <div class="category-bottom">
+          <ul></ul>
+        </div>
+        <div class="recommen-youhui "><a href="#">查看更多评价</a></div>
+    </script>
+    <script type="text/html" id="tpl2">
+      {{each result v i }}
+           <li>
+                <div>
+                  <p>{{v.comName}}</p>
+                  <p>{{v.comTime}}</p>
+                </div>
+                <p>{{v.comFrom}}</p>
+                <p>{{v.comContent}}</p>
+          </li>
+        {{/each}}
+    </script>
+  </body>
+</html>

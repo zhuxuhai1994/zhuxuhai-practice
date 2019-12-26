@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>zxh首页</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- 头部 -->
+    <header class="header" class="header">
+      <a href="#" class="leftlogo"
+        ><img src="./img/header_logo.png" alt="leftlogo"
+      /></a>
+      <a href="#" class="rightlogo"
+        ><img src="./img/header_app.png" alt="leftlogo"
+      /></a>
+    </header>
+    <section>
+      <form action="#" class="form-search">
+        <input type="text" placeholder="请输入你想比价的商品" />
+        <button>搜索</button>
+      </form>
+    </section>
+    <section class="menu">
+      <ul>
+        <!-- 挖个坑 -->
+      </ul>
+    </section>
+    <section class="recommen">
+      <div class="recommen-tittle">
+        <span>超值折扣推荐</span>
+        <img src="./img/more.png" alt="" />
+      </div>
+      <ul>
+        <!-- 挖个坑 -->
+      </ul>
+      <div class="recommen-youhui "><a href="#">更多优惠信息</a></div>
+      <div class="bujiu"></div>
+    </section>
+    <section class="recommen-listlime">
+      <div class="recommen-tittle">
+        <span>品牌排行</span>
+        <img src="./img/more.png" alt="" />
+      </div>
+    </section>
+    <footer class="footer">
+      <ul>
+        <li><a href="javascript:;">登录</a></li>
+        <li><a href="javascript:;">注册</a></li>
+        <li><a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</a></li>
+      </ul>
+      <div class="footer-bottom">
+        <p>
+          <span>手机app下载&nbsp;</span><a href="#" class="mmm-tract">慢慢买手机版</a
+          >&nbsp;<ins class="">--掌上比价平台</ins>
+        </p>
+        <span class="">m.manmanbuy.com</span>
+      </div>
+    </footer>
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./lib/template-web.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/index.js"></script>
+    <script type="text/html" id="tpl">
+      {{each result v i }}
+      <li class="{{i==7? 'now':''}} {{i>7? 'active':''}}">
+        <a href="{{i==7? v.titlehref:v.titlehref+'.html'}}" >
+          <img src="./img/{{v.img}}" alt=""><p>{{v.name}}</p>
+        </a>
+      </li>
+      {{/each}}
+    </script>
+    <script type="text/html" id="tpl2">
+      {{each result v i }}
+      <li data-id="{{v.productId}}">
+        <a href="moneyproduct.html?productid={{v.productId}}">
+          <div class="recommen-left"><div><img src="{{v.productImgLg.src}}" alt="{{v.productImgSm.alt}}"></div></div>
+              <div class="recommen-right">
+                <div class="recommenrtop txt-cut ">{{v.productName}}<span>{{v.productPinkage}}</span></div>
+                <div class="recommenrbottom">
+                  <p>{{v.productFrom}} | {{v.productTime}}</p>
+                  <p>{{v.productComCount}}</p>
+              </div>
+          </div>
+      </a>
+      </li>
+      {{/each}}
+    </script>
+  </body>
+</html>

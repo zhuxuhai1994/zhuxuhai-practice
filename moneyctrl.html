@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>productlist</title>
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/moneyctrl.css" />
+  </head>
+  <body>
+    <!-- 头部 -->
+    <header class="header" class="header">
+        <a href="#" class="rightlogo"
+        ><img src="./img/header_app.png" alt="leftlogo"
+      /></a>
+      <h1>省钱控-最新优惠</h1>
+    </header>
+    <article class="article">
+      <section class="recommen">
+        <ul>
+          <!-- 挖个坑 -->
+        </ul>
+      </section>
+      <div class="fenyeqi">
+      
+      </div>
+    </article>
+    <footer class="footer">
+      <ul>
+        <li><a href="javascript:;">登录</a></li>
+        <li><a href="javascript:;">注册</a></li>
+        <li>
+          <a href="#"
+            ><img src="http://www.zuyushop.com/wap/images/top.jpg" />返回顶部</a
+          >
+        </li>
+      </ul>
+      <div class="footer-bottom">
+        <p>
+          <span>手机app下载&nbsp;</span
+          ><a href="#" class="mmm-tract">慢慢买手机版</a>&nbsp;<ins class=""
+            >--掌上比价平台</ins
+          >
+        </p>
+        <span class="">m.manmanbuy.com</span>
+      </div>
+    </footer>
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./lib/template-web.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/moneyctrl.js"></script>
+    <script type="text/html" id="tpl">
+      {{each result v i }}
+      <li data-id="{{v.productId}}">
+        <a href="moneyproduct.html?productid={{v.productId}}">
+          <div class="recommen-left"><div><img src="{{v.productImgLg.src}}" alt="{{v.productImgSm.alt}}"></div></div>
+              <div class="recommen-right">
+                <div class="recommenrtop txt-cut ">{{v.productName}}<span>{{v.productPinkage}}</span></div>
+                <div class="recommenrbottom">
+                  <p>{{v.productFrom}} | {{v.productTime}}</p>
+                  <p>{{v.productComCount}}</p>
+              </div>
+          </div>
+      </a>
+      </li>
+      {{/each}}
+    </script>
+    <script type="text/html" id="tpl2">
+      <div><a href="javascript:;" class="goye" data-min="1">上一页</a></div>
+        <div>
+          <select name="yema" id="yema">
+            <option value="1">第一页</option>
+            <option value="2">第二页</option>
+            <option value="3">第三页</option>
+          </select>
+        </div>
+        <div><a href="javascript:;" class="backye" data-max="{{result.count/10}}">下一页</a></div>
+    </script>
+  </body>
+</html>

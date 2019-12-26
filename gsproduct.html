@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>productlist</title>
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/gsproduct.css" />
+  </head>
+  <body>
+    <!-- 头部 -->
+    <header class="header" class="header">
+      <a href="#" class="rightlogo"
+        ><img src="./img/header_app.png" alt="leftlogo"
+      /></a>
+      <h1>凑单品</h1>
+    </header>
+    <section class="search-bar">
+      <ul>
+        <!-- wagekeng -->
+      </ul>
+    </section>
+    <div class="showban">
+      <ul>
+        <!-- wakeng2 -->
+      </ul>
+    </div>
+    <article class="article">
+      <ul>
+        <!-- wagekeng3 -->
+      </ul>
+    </article>
+    <footer class="footer">
+      <ul>
+        <li><a href="javascript:;">登录</a></li>
+        <li><a href="javascript:;">注册</a></li>
+        <li>
+          <a href="#"
+            ><img src="http://www.zuyushop.com/wap/images/top.jpg" />返回顶部</a
+          >
+        </li>
+      </ul>
+      <div class="footer-bottom">
+        <p>
+          <span>手机app下载&nbsp;</span
+          ><a href="#" class="mmm-tract">慢慢买手机版</a>&nbsp;<ins class=""
+            >--掌上比价平台</ins
+          >
+        </p>
+        <span class="">m.manmanbuy.com</span>
+      </div>
+    </footer>
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./lib/template-web.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/gsproduct.js"></script>
+    <script type="text/html" id="tpl">
+      {{each arr v i }}
+      <li data-id="{{i}}">{{v}}</li>
+      {{/each}}
+    </script>
+    <script type="text/html" id="tpl2">
+      {{each result v i}}
+      <li {{v.areaId?'data-ad':'data-sd'}}= "{{v.areaId?v.areaId:v.shopId}}">{{v.areaName?v.areaName:v.shopName}}</li>
+      {{/each}}
+    </script>
+    <script type="text/html" id="tpl3">
+      {{each result v i}}
+      <li>
+          <a href="http://item.m.jd.com/ware/view.action?wareId=1274360">
+            <img src={{v.productImg}} alt="11" />
+            <p>{{v.productName}}</p>
+            <div>
+              <p class="chifan">{{v.productPrice}}</p>
+              <button>去凑单</button>
+            </div>
+          </a>
+        </li>
+      {{/each}}
+    </script>
+  </body>
+</html>

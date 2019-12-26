@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>productlist</title>
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/moneyproduct.css" />
+  </head>
+  <body>
+    <!-- 头部 -->
+    <header class="header" class="header">
+      <a href="#" class="rightlogo"
+        ><img src="./img/header_app.png" alt="leftlogo"
+      /></a>
+      <h1>国内折扣</h1>
+    </header>
+    <article class="article"></article>
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./lib/template-web.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/discount.js"></script>
+    <script type="text/html" id="tpl">
+
+      <div class="moneyproduct-tittle">
+        <h3>{{result.productName}}</h3>
+      </div>
+      <div class="moneyproduct-top">
+        <span>{{result.productFrom}}</span><span>{{result.productTime}}</span
+        ><span>{{result.productTips}}</span>
+      </div>
+      <div class="moneyproduct-img"><img src={{result.productImg.src}}  alt={{result.productImg.alt}} /></div>
+      <div class="moneyproduct-coin">
+        <p>{{result.productInfo}}</p>
+        <p>{{result.productName}}</p>
+        <p><img src={{result.productImg.src}}  alt={{result.productImg.alt}} /></p>
+      </div>
+      <div class="moneyproduct-area">
+        <ul>
+        <!-- ha -->
+        </ul>
+      </div>
+      <div class="moneyproduct-goumai"><a href="">前往购买</a></div>
+      <div class="moneyproduct-imged">
+        <img src="./img/mmbweixin2.png" alt="" />
+      </div>
+      <div class="moneyproduct-pinglun">
+        <p>发表评论</p>
+        <form>
+          <textarea name="moneyproduct-pinglunpp" rows="3" ></textarea>
+          <div><button>发表评论</button></div>
+        </form>
+      </div>
+      <div class="moneyproduct-newlun">
+        <div class="moneyproduct-ilist">最近评价</div>
+        <div class="moneyproduct-ulist">
+          <img src="http://home.manmanbuy.com/upface/face/1466230634_162.jpg" alt="" />
+          <div>
+            <div>
+              <p>赶鸭子上架</p>
+              <em>21:00</em>
+            </div>
+            <div>
+              比超市便宜了几块
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
+    <!-- <script type="text/html" id="tpl2">
+      {{each arr v i}}
+          <li><a href="javascript:;">{{v.replace('有货',"")}}</a><em>有货</em></li>
+      {{/each}}
+    </script> -->
+  </body>
+</html>

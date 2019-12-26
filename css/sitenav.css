@@ -1,0 +1,23 @@
+body {
+  background-color: #ffffff;
+}
+.article ul {
+  margin: 0.4rem /* 20/50 */ auto;
+  width: 12rem /* 600/50 */;
+  overflow: hidden;
+}
+.article ul li {
+  float: left;
+  height: 1.6rem /* 80/50 */;
+  line-height: 1.6rem;
+  padding: 0 0.4rem /* 20/50 */;
+  border: 1px solid #bfbfbf;
+  margin: 0 0 0.2rem /* 10/50 */ 0.2rem /* 10/50 */;
+  background: #f4f4f4;
+}
+.article ul li a {
+  color: #000;
+}
+.article ul li img {
+  margin-right: 0.2rem /* 10/50 */;
+}

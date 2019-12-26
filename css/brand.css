@@ -1,0 +1,51 @@
+body {
+  background-color: #fff;
+}
+.hotpin {
+  background: #f3f3f3;
+  border: 1px solid #c8c8c8;
+  border-left: none;
+  border-right: none;
+  color: #874604;
+  line-height: 1.44rem /* 72/50 */;
+  font-size: 0.56rem /* 28/50 */;
+  padding-left: 0.4rem /* 20/50 */;
+  font-weight: 700;
+}
+.article ul li {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 0.4rem /* 20/50 */;
+  background-image: url(/assets/img/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: 0.8rem /* 40/50 */ 0.8rem /* 40/50 */;
+  background-position: right center;
+  height: 2.56rem /* 128/50 */;
+}
+.article ul li a {
+  position: relative;
+}
+.article ul li a em {
+  width: 0.8rem /* 40/50 */;
+  height: 0.8rem /* 40/50 */;
+  background: #f10e0e;
+  color: #000;
+  display: block;
+  line-height: 0.8rem /* 40/50 */;
+  text-align: center;
+  color: #fff;
+}
+.article ul li a div {
+  position: absolute;
+  top: 0;
+  left: 1.4rem /* 70/50 */;
+  width: 8rem /* 400/50 */;
+}
+.article ul li a div p {
+  color: #000;
+  font-size: 0.64rem /* 32/50 */;
+}
+.article ul li a div span {
+  color: #999;
+  margin-top: 0.12rem /* 6/50 */;
+  font-size: 0.56rem /* 28/50 */;
+}

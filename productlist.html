@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>productlist</title>
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/productlist.css" />
+  </head>
+  <body>
+    <!-- 头部 -->
+    <header class="header" class="header">
+      <a href="#" class="leftlogo"
+        ><img src="./img/header_logo.png" alt="leftlogo"
+      /></a>
+      <a href="#" class="rightlogo"
+        ><img src="./img/header_app.png" alt="leftlogo"
+      /></a>
+    </header>
+    <section>
+      <form action="#" class="form-search">
+        <input type="text" placeholder="请输入你想比价的商品" />
+        <button>搜索</button>
+      </form>
+    </section>
+    <section class="fidler">
+      <a href="index.html">首页</a><span>></span
+      ><a href="category.html">全部分类</a><span>>></span><a class="yyqq"></a
+      ><button>筛选</button>
+    </section>
+    <article class="article">
+      <ul class="category">
+        <!-- 挖个坑 -->
+      </ul>
+      <div class="fenyeqi">
+        <div><a href="javascript:;" class="goye">上一页</a></div>
+        <div>
+          <select name="yema" id="yema"> </select>
+        </div>
+        <div><a href="javascript:;" class="backye">下一页</a></div>
+      </div>
+    </article>
+    <footer class="footer">
+      <ul>
+        <li><a href="javascript:;">登录</a></li>
+        <li><a href="javascript:;">注册</a></li>
+        <li>
+          <a href="#"
+            ><img src="http://www.zuyushop.com/wap/images/top.jpg" />返回顶部</a
+          >
+        </li>
+      </ul>
+      <div class="footer-bottom">
+        <p>
+          <span>手机app下载&nbsp;</span
+          ><a href="#" class="mmm-tract">慢慢买手机版</a>&nbsp;<ins class=""
+            >--掌上比价平台</ins
+          >
+        </p>
+        <span class="">m.manmanbuy.com</span>
+      </div>
+    </footer>
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./lib/template-web.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/productlist.js"></script>
+    <script type="text/html" id="tpl">
+      {{each result.list v i }}
+      <li data-id="{{v.productId}}">
+        <a href="bijia.html?productId={{v.productId}}"  class = "bdf">
+          <div class="recommen-left">
+            <div><img src="{{v.productImg.src}}" alt="v.productImg.alt"></div>
+          </div>
+          <div class="recommen-right">
+                <div class="recommenrtop txt-cut ">{{v.productName}}</div>
+                <div class="recommenmoney">{{v.productPrice}}</div>
+                <div class="recommenrbottom">
+                  <p>{{v.productQuote}}&nbsp;&nbsp;&nbsp;{{v.productCom}}</p>
+              </div>
+          </div>
+      </a>
+      </li>
+      {{/each}}
+    </script>
+    <!-- <script type="text/html" id="tpl2">
+  
+    </script> -->
+  </body>
+</html>
